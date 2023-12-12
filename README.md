@@ -19,7 +19,11 @@ A function $T(n)$ is an element of Big O of another function $f(n)$ if and only 
 
 Consider the functions $g(n)=\log_{A}(n)$ and $f(n)=\log_{B}(n)$, where $A$ and $B$ are constants such that $A \neq B$. Through the logarthim change of base property, the function $g(n)$ can be rewritten as $g(n)=\frac{\log_{B}(n)}{\log_{B}(A)}$. Note that the denominator in this function is a constant, which if we say $k = \frac{1}{\log_{B}{A}}$ and substitute that in, we get the equation $g(n)=k\log_{B}(n)$
 
-From this equation, it is evident that $g(n)$ satisfies the definition of Big O such that $g(n) \in O(\log_{B}(n))$. In the same way, we can show that $\log_{B}(n) \in O(\log_{A}(n))$. Therefore, $O(\log_{A} n)$ and $O(\log_{B} n)$ are equivalent.
+Definition of Big O:
+
+$T(n) \in O(f(n))$ if there are positive constants $c$ and $n_0$ such that $T(n) \leq cf(n)$ for all $n \geq n_0$
+
+From the equations $g(n)=k\log_{B}(n)$ and $f(n)=\log_{B}(n)$, we can select constants $c = k + 1$ and any $n_0 \in \mathbb{R}$ and plug them into the definition of Big O. $k\log_{B}(n_0) \leq (k+1)\log_{B}(n_0)$. If you reduce this, you get the equation $ 0 \leq 1$, which is always true, and always meets the definition of Big O. Therefore, $O(\log_{A} n)$ and $O(\log_{B} n)$ are equivalent.
 
 
 # References
