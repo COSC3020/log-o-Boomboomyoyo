@@ -23,7 +23,7 @@ Definition of Big O:
 
 $T(n) \in O(f(n))$ if there are positive constants $c$ and $n_0$ such that $T(n) \leq cf(n)$ for all $n \geq n_0$
 
-From the equations $g(n)=k\log_{B}(n)$ and $f(n)=\log_{B}(n)$, we can select constants $c = k + 1$ and any $n_0 \in \mathbb{R}$ and plug them into the definition of Big O. $k\log_{B}(n_0) \leq (k+1)\log_{B}(n_0)$. If you reduce this, you get the equation $ 0 \leq 1$, which is always true, and always meets the definition of Big O. Therefore, $O(\log_{A} n)$ and $O(\log_{B} n)$ are equivalent.
+From the equations $g(n)=k\log_{B}(n)$ and $f(n)=\log_{B}(n)$, we can select constants $c = k + 1$ and any $n_0 \in 0 < \mathbb{R}$ and plug them into the definition of Big O. $k\log_{B}(n_0) \leq (k+1)\log_{B}(n_0)$. If you reduce this, you get the equation $ 0 \leq 1$, which is always true, and always meets the definition of Big O. Therefore, $O(\log_{A} n)$ and $O(\log_{B} n)$ are equivalent.
 
 
 # References
