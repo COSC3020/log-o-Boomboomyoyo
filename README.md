@@ -17,13 +17,15 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 First, a translation of Big O out of mathematical notation into words, so I can understand it more clearly.
 A function $T(n)$ is an element of Big O of another function $f(n)$ if and only if there exists a value $c$ and $n_0$ where $T(n) \leq c(f(n))$ for all $n \geq n_0$.
 
-Consider the functions $g(n)=\log_{A}(n)$ and $f(n)=\log_{B}(n)$, where $A$ and $B$ are constants such that $A \neq B$. Through the logarthim change of base property, the function $g(n)$ can be rewritten as $g(n)=\frac{\log_{B}(n)}{\log_{B}(A)}$. Note that the denominator in this function is a constant, which if we say $k = \frac{1}{\log_{B}{A}}$ and substitute that in, we get the equation $g(n)=k\log_{B}(n)$
 
 Definition of Big O:
 
 $T(n) \in O(f(n))$ if there are positive constants $c$ and $n_0$ such that $T(n) \leq cf(n)$ for all $n \geq n_0$
 
-From the equations $g(n)=k\log_{B}(n)$ and $f(n)=\log_{B}(n)$, we can select constants $c = k + 1$ and any $n_0 \in 0 < \mathbb{R}$ and plug them into the definition of Big O. $k\log_{B}(n_0) \leq (k+1)\log_{B}(n_0)$. If you reduce this, you get the equation $ 0 \leq 1$, which is always true, and always meets the definition of Big O. Therefore, $O(\log_{A} n)$ and $O(\log_{B} n)$ are equivalent.
+Consider the functions $g(n)=\log_{A}(n)$ and $f(n)=\log_{B}(n)$, where $A$ and $B$ are arbitrary constants. Through the logarthim change of base property, the function $g(n)$ can be rewritten as $g(n)=\frac{\log_{B}(n)}{\log_{B}(A)}$. Note that the denominator in this function is a constant, which if we say $k = \frac{1}{\log_{B}{A}}$ and substitute that in, we get the equation $g(n)=k\log_{B}(n)$
+
+
+From the equations $g(n)=k\log_{B}(n)$, we can select a constant $c$ larger than $k$, such as $c = k + 1$ and any $n_0 \in 0 < \mathbb{R}$ and plug them into the definition of Big O. $k\log_{B}(n_0) \leq (k+1)\log_{B}(n_0)$. If you reduce this, you get the equation $ 0 \leq 1$, which is always true, and always meets the definition of Big O. Therefore, $\log_{A} n \in O(\log_{B} n)$. Since $A$ and $B$ are completely arbitrary constants, $O(\log_{A} n)$ and $O(\log_{B} n)$ are equivalent. Now, back to the original question, if we choose $A=5$ and $B=2$ or vice versa, we get that $O(\log_{5} n)$ and $O(\log_{2} n)$ are equivalent.
 
 
 # References
